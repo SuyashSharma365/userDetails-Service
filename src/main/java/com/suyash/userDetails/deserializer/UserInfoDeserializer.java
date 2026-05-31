@@ -32,5 +32,4 @@ public class UserInfoDeserializer implements Deserializer <UserInfo> {
     @Override
     public void close() {
     }
-
 }
