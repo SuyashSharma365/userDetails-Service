@@ -1,19 +1,19 @@
 package com.suyash.userDetails.deserializer;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.suyash.userDetails.entities.UserInfo;
+import com.suyash.userDetails.entities.UserInfoDto;
 import org.apache.kafka.common.serialization.Deserializer;
 
 import java.util.Map;
 
-public class UserInfoDeserializer implements Deserializer <UserInfo> {
+public class UserInfoDeserializer implements Deserializer <UserInfoDto> {
 
     @Override
     public void configure(Map<String, ?> configs, boolean isKey) {
     }
 
     @Override
-    public UserInfo deserialize(String topic,  byte[] data) {
+    public UserInfoDto deserialize(String topic,  byte[] data) {
 
         try {
             if (data == null) {
@@ -21,8 +21,8 @@ public class UserInfoDeserializer implements Deserializer <UserInfo> {
             }
             ObjectMapper objectMapper = new ObjectMapper();
 
-            UserInfo user = null;
-            user = objectMapper.readValue(data, UserInfo.class);
+            UserInfoDto user = null;
+            user = objectMapper.readValue(data, UserInfoDto.class);
             return user;
         } catch (Exception e) {
             throw new RuntimeException("Error deserializing UserInfo", e);
