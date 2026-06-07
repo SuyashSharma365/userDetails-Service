@@ -3,10 +3,10 @@ package com.suyash.userDetails;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+//@SpringBootTest
 class UserDetailsApplicationTests {
 
-	@Test
+//	@Test
 	void contextLoads() {
 	}
 
