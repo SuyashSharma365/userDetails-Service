@@ -1,6 +1,7 @@
 package com.suyash.userDetails.repository;
 import com.suyash.userDetails.entities.UserInfo;
 import com.suyash.userDetails.repository.UserRepository;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -12,6 +13,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 //@DataJpaTest
 //becase this i need to setup a database
 // i dont want to go with H2
+
+@Disabled
 class UserRepositoryTest {
 
     @Autowired
